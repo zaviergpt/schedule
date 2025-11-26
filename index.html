@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/beercss@3.12.13/dist/cdn/beer.min.css" rel="stylesheet">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.12.13/dist/cdn/beer.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+            * {
+                border: 0;
+                padding: 0;
+                margin: 0;
+                user-select: none;
+                outline: none;
+            }
+            body {
+                font-family: "Google Sans Flex", sans-serif;
+                font-optical-sizing: auto;
+                opacity: 0;
+                transition: opacity 0.25s;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <button class="circle transparent">
+                    <i>menu</i>
+                </button>
+                <h6 class="max center-align">Schedule</h6>
+                <button class="circle transparent">
+                    <img class="responsive" src="https://placehold.co/10">
+                </button>
+            </nav>
+        </header>
+        <main class="responsive center-align no-padding">
+            <article class="large no-padding transparent max">
+                <div class="absolute center middle">
+                    <div class="center max">
+                        <div class="small-width small-height no-padding">
+                            <div class="shape loading-indicator max rotate no-padding"></div>
+                        </div>
+                    </div>
+                    <div class="small-padding">
+                        <h6 id="task-name">Shower</h6>
+                        <span id="task-time">00:07 - 10:00</span>
+                        <progress id="task-progress" class="wavy top-margin bottom-margin" id="" value="30" max="100"></progress>
+                    </div>
+                </div>
+            </article>
+            <!--
+            <article class="medium no-margin transparent">
+                <ul class="list no-space">
+                    <li class="surface-container padding" style="border-radius: 1vh">
+                        <button class="circle">
+                            <i class="fa-solid fa-shower"></i>
+                        </button>
+                        <div class="max">
+                            <h6 class="small">Shower</h6>
+                            <div>00:07 - 10:00</div>
+                        </div>
+                        <label>
+                            01:00:00
+                        </label>
+                    </li>
+                </ul>
+            </article>
+        -->
+        </main>
+    </body>
+    <script>
+        start = (new Date()).setHours(0, 0, 0, 0)
+        schedule = [
+            ["Sleep", "fa-solid fa-moon", [0, 8]],
+            ["Quiet Time", "fa-solid fa-cross", [8, 9]],
+            ["Project", "fa-solid fa-pen", [9, 12]],
+            ["Shower", "fa-solid fa-shower", [12, 12.5]],
+            ["Transport", "fa-solid fa-bus", [12.5, 13]],
+            ["Work", "fa-solid fa-hammer", [13, 19]],
+            ["Dinner", "fa-solid fa-bowl-food", [19, 20]],
+            ["Transport", "fa-solid fa-bus", [20, 20.5]],
+            ["Project", "fa-solid fa-pen", [20.5, 23]],
+            ["Quiet Time", "fa-solid fa-cross", [23, 0]]
+        ]
+        elements = {
+            progress: document.getElementById("task-progress"),
+            name: document.getElementById("task-name"),
+            time: document.getElementById("task-time")
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            window.addEventListener("load", () => {
+                setInterval(function(){
+                    current = (Date.now() - start)/3600000
+                    task = schedule.filter((task) => (current > task[2][0] && current < task[2][1]))[0]
+                    elements.progress.value = (current - task[2][0])
+                    elements.progress.max = (task[2][1] - task[2][0])
+                    elements.name.textContent = task[0]
+                    elements.time.textContent = `${task[2][1] - task[2][0]} Hours`
+                    document.body.style.opacity = 1
+                }, 1000)
+            })
+        })
+    </script>
+</html>
