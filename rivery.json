@@ -1,0 +1,317 @@
+{
+    "events": {
+        "1777856400000": {
+            "name": "Test 1",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.1,
+            "required": 604800000
+        },
+        "1778475600000": {
+            "name": "Test 1",
+            "subject": "dXggZGVz",
+            "weightage": 0.15,
+            "required": 1209600000
+        },
+        "1779163200000": {
+            "name": "Assignment 1",
+            "subject": "YnVzaW5l",
+            "weightage": 0.3,
+            "required": 2419200000
+        },
+        "1779325200000": {
+            "name": "Test 1",
+            "subject": "bmV0d29y",
+            "weightage": 0.15,
+            "required": 1814400000
+        },
+        "1780275600000": {
+            "name": "Mini Quiz 1",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.03,
+            "required": 1209600000
+        },
+        "1780290000000": {
+            "name": "Test 2",
+            "subject": "dXggZGVz",
+            "weightage": 0.25,
+            "required": 1209600000
+        },
+        "1780549200000": {
+            "name": "Test 1",
+            "subject": "YXBwbGll",
+            "weightage": 0.3,
+            "required": 1209600000
+        },
+        "1780880400000": {
+            "name": "Practical 1",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.3,
+            "required": 1209600000
+        },
+        "1781139600000": {
+            "name": "Assignment 1",
+            "subject": "bmV0d29y",
+            "weightage": 0.25,
+            "required": 2419200000
+        },
+        "1783396800000": {
+            "name": "Assignment 2",
+            "subject": "YnVzaW5l",
+            "weightage": 0.25,
+            "required": 2419200000
+        },
+        "1783904400000": {
+            "name": "Test 2",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.2,
+            "required": 1209600000
+        },
+        "1784606400000": {
+            "name": "Test 1",
+            "subject": "YnVzaW5l",
+            "weightage": 0.15,
+            "required": 2419200000
+        },
+        "1784768400000": {
+            "name": "Assignment 2",
+            "subject": "bmV0d29y",
+            "weightage": 0.25,
+            "required": 2419200000
+        },
+        "1785114000000": {
+            "name": "Mini Quiz 2",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.03,
+            "required": 1209600000
+        },
+        "1785128400000": {
+            "name": "Practical",
+            "subject": "dXggZGVz",
+            "weightage": 0.25,
+            "required": 1209600000
+        },
+        "1785387600000": {
+            "name": "Test 2",
+            "subject": "YXBwbGll",
+            "weightage": 0.3,
+            "required": 1209600000
+        },
+        "1785718800000": {
+            "name": "Practical 2",
+            "subject": "cHJvZ3Jh",
+            "weightage": 0.25,
+            "required": 1209600000
+        },
+        "1785978000000": {
+            "name": "Test 2",
+            "subject": "bmV0d29y",
+            "weightage": 0.25,
+            "required": 2419200000
+        },
+        "1786338000000": {
+            "name": "Assignment",
+            "subject": "dXggZGVz",
+            "weightage": 0.4,
+            "required": 1814400000
+        },
+        "1786420800000": {
+            "name": "Assignment 3",
+            "subject": "YnVzaW5l",
+            "weightage": 0.4,
+            "required": 2419200000
+        },
+        "1786597200000": {
+            "name": "Assignment",
+            "subject": "YXBwbGll",
+            "weightage": 0.3,
+            "required": 1814400000
+        }
+    },
+    "subjects": {
+        "cHJvZ3Jh": {
+            "name": "Programming",
+            "color": "#0099E1"
+        },
+        "dXggZGVz": {
+            "name": "UX Design in Web Development",
+            "color": "#F8C300"
+        },
+        "YnVzaW5l": {
+            "name": "Business Innovation & Enterprise",
+            "color": "#FD0061"
+        },
+        "bmV0d29y": {
+            "name": "Network Technologies",
+            "color": "#00C09A"
+        },
+        "YXBwbGll": {
+            "name": "Applied Mathematics in Computing",
+            "color": "#A652BB"
+        },
+        "Zml0bmVz": {
+            "name": "Fitness for Life",
+            "color": "#597E8D"
+        }
+    },
+    "timetable": {
+        "0": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 28800000,
+                "end": 32399999
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 64800000,
+                "end": 75599999
+            }
+        },
+        "1": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 25200000,
+                "end": 28799999
+            },
+            "cHJvZ3Jh": {
+                "type": "subject",
+                "start": 32400000,
+                "end": 42600000
+            },
+            "Lunch": {
+                "type": "dining",
+                "start": 43200000,
+                "end": 46799999
+            },
+            "dXggZGVz": {
+                "type": "subject",
+                "start": 46800000,
+                "end": 57000000
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 64800000,
+                "end": 75599999
+            }
+        },
+        "2": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 36000000,
+                "end": 39599999
+            },
+            "YnVzaW5l": {
+                "type": "subject",
+                "start": 43200000,
+                "end": 53400000
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 64800000,
+                "end": 75599999
+            }
+        },
+        "3": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 28800000,
+                "end": 32399999
+            },
+            "bmV0d29y": {
+                "type": "non-priority",
+                "start": 32400000,
+                "end": 46799999
+            },
+            "YXBwbGll": {
+                "type": "non-priority",
+                "start": 46800000,
+                "end": 61199999
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 64800000,
+                "end": 75599999
+            }
+        },
+        "4": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 25200000,
+                "end": 28799999
+            },
+            "bmV0d29y": {
+                "type": "subject",
+                "start": 32400000,
+                "end": 42600000
+            },
+            "Lunch": {
+                "type": "dining",
+                "start": 43200000,
+                "end": 46799999
+            },
+            "YXBwbGll": {
+                "type": "subject",
+                "start": 46800000,
+                "end": 53400000
+            },
+            "Zml0bmVz": {
+                "type": "subject",
+                "start": 57600000,
+                "end": 64200000
+            }
+        },
+        "5": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 28800000,
+                "end": 32399999
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 64800000,
+                "end": 75599999
+            }
+        },
+        "6": {
+            "Breakfast": {
+                "type": "dining",
+                "start": 28800000,
+                "end": 32399999
+            },
+            "Dinner": {
+                "type": "dining",
+                "start": 61200000,
+                "end": 64799999
+            },
+            "priority": {
+                "type": "priority",
+                "start": 28800000,
+                "end": 39599999
+            }
+        }
+    }
+}
