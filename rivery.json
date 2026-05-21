@@ -277,6 +277,16 @@
                 "type": "subject",
                 "start": 57600000,
                 "end": 64200000
+            },
+            "Fuel Prayer Meeting": {
+                "type": "rest",
+                "start": 70200000,
+                "end": 73800000
+            },
+            "Supper": {
+                "type": "dining",
+                "start": 75600000,
+                "end": 79199999
             }
         },
         "5": {
@@ -297,20 +307,10 @@
             }
         },
         "6": {
-            "Breakfast": {
-                "type": "dining",
-                "start": 28800000,
-                "end": 32399999
-            },
-            "Dinner": {
-                "type": "dining",
-                "start": 61200000,
-                "end": 64799999
-            },
-            "priority": {
-                "type": "priority",
-                "start": 28800000,
-                "end": 39599999
+            "Church": {
+                "type": "rest",
+                "start": 45000000,
+                "end": 79199999
             }
         }
     }
