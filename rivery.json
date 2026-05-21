@@ -160,6 +160,11 @@
                 "start": 28800000,
                 "end": 32399999
             },
+            "cHJvZ3Jh": {
+                "type": "non-priority",
+                "start": 32400000,
+                "end": 46799999
+            },
             "Dinner": {
                 "type": "dining",
                 "start": 61200000,
@@ -280,7 +285,7 @@
             },
             "Fuel Prayer Meeting": {
                 "type": "rest",
-                "start": 70200000,
+                "start": 71100000,
                 "end": 73800000
             },
             "Supper": {
