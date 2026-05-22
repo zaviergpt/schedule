@@ -13,22 +13,24 @@
                 outline: none;
                 user-select: none;
             }
-            body {
+            html, body {
                 font-size: 1em;
                 background-color: #000000;
                 color: rgba(255, 255, 255, 0.9);
                 font-family: "Google Sans Flex", sans-serif;
                 font-optical-sizing: auto;
-                display: none;
             }
-            ul#timetable {
+            .agenda ul#timetable {
                 position: relative;
                 overflow-y: scroll;
                 height: calc(100vh - 7.25em - (0.875em * 4) - 40vh);
                 margin: 0.875em;
                 border-radius: 0.875em;
             }
-            ul#timetable li {
+            .agenda ul#timetable::-webkit-scrollbar, .agenda ul#focus::-webkit-scrollbar {
+                display: none;
+            }
+            .agenda ul#timetable li {
                 list-style-type: none;
                 position: absolute;
                 width: calc(100% - (0.875em * 2));
@@ -36,18 +38,18 @@
                 padding: 0.875em;
                 border-radius: 0.875em;
             }
-            ul#timetable li h1, ul#focus li h1 {
+            .agenda ul#timetable li h1, .agenda ul#focus li h1 {
                 font-size: 1.275em;
                 line-height: calc(1.275em/1.375);
                 color: rgba(0, 0, 0, 0.675);
             }
-            ul#timetable li p, ul#focus li p {
+            .agenda ul#timetable li p, .agenda ul#focus li p {
                 font-size: 0.7437em;
                 line-height: calc(0.7437em/1.675);
                 color: rgba(0, 0, 0, 0.675);
                 margin: calc(0.875em/1.25) 0px;
             }
-            ul#timetable li span, ul#focus li ul li {
+            .agenda ul#timetable li span, .agenda ul#focus li ul li {
                 display: inline-block;
                 background-color: rgba(0, 0, 0, 0.675); /* rgba(0, 0, 0, 0.5) */
                 font-size: 0.7437em;
@@ -57,87 +59,100 @@
                 padding: calc(0.7437em/1.25);
                 border-radius: 0.7437em;
             }
-            #now {
+            .agenda #now {
                 margin: 0.875em;
                 border-radius: 0.875em;
                 padding: 0.875em;
                 height: calc(7.25em - (0.875em * 2));
+                display: none;
             }
-            #now div:has(p, h1) {
+            .agenda #now div:has(p, h1) {
                 height: 3.7em;
                 margin-bottom: 1.5em;
             }
-            #now div:has(p, h1) p {
+            .agenda #now div:has(p, h1) p {
                 font-size: 0.875em;
                 line-height: calc(0.875em/1.675);
                 color: rgba(255, 255, 255, 0.9);
-                text-shadow: 0px 0px calc(0.875em/12) rgba(0, 0, 0, 0.5);
+                text-shadow: 0px 0px calc(0.875em/24) rgba(0, 0, 0, 0.5);
             }
-            #now div:has(p, h1) h1 {
+            .agenda #now div:has(p, h1) h1 {
                 font-size: 1.5em;
                 line-height: calc(1.5em/1.675);
                 color: rgba(255, 255, 255, 0.9);
-                text-shadow: 0px 0px calc(0.875em/12) rgba(0, 0, 0, 0.5);
+                text-shadow: 0px 0px calc(0.875em/24) rgba(0, 0, 0, 0.5);
                 margin-bottom: calc(0.875em/2);
             }
-            #now .progress {
+            .agenda #now .progress {
                 height: calc(0.875em/3);
                 background-color: rgba(0, 0, 0, 0.125);
                 border-radius: 0.875em;
                 overflow: hidden;
                 margin-top: calc(0.875em/1.125);
             }
-            #now .progress div {
+            .agenda #now .progress div {
                 background-color: rgba(255, 255, 255, 0.9);
-                text-shadow: 0px 0px calc(0.875em/12) rgba(0, 0, 0, 0.5);
+                text-shadow: 0px 0px calc(0.875em/24) rgba(0, 0, 0, 0.5);
                 height: 100%;
                 border-radius: 0.875em;
             }
-            ul#focus {
+            .agenda ul#focus {
                 margin: 0.875em;
                 border-radius: 0.875em;
                 height: 40vh;
                 overflow-y: scroll;
             }
-            ul#focus li ul li {
+            .agenda ul#focus li ul li {
                 background-color: rgba(255, 255, 255, 0.9);
-                box-shadow: 0px 0px calc(0.875em/12) rgba(0, 0, 0, 0.5);
+                box-shadow: 0px 0px calc(0.875em/24) rgba(0, 0, 0, 0.5);
                 text-shadow: none;
             }
-            ul#focus li h1, ul#focus li p {
+            .agenda ul#focus li h1, .agenda ul#focus li p {
                 color: rgba(255, 255, 255, 0.9);
-                text-shadow: 0px 0px calc(0.875em/12) rgba(0, 0, 0, 0.5);
+                text-shadow: 0px 0px calc(0.875em/24) rgba(0, 0, 0, 0.5);
             }
-            ul#focus li:not(ul#focus li ul li) {
+            .agenda ul#focus li:not(.agenda ul#focus li ul li) {
                 margin: calc(0.875em/3) 0px;
                 padding: 0.875em;
                 border-radius: 0.875em;
                 color: rgba(0, 0, 0, 0.675);
             }
-            ul#focus li:not(ul#focus li ul li):first-child, ul#focus li:not(ul#focus li ul li):last-child {
+            .agenda ul#focus li:not(.agenda ul#focus li ul li):first-child, .agenda ul#focus li:not(.agenda ul#focus li ul li):last-child {
                 margin: 0;
             }
-            ul#focus li ul {
+            .agenda ul#focus li ul {
                 list-style-type: none;
                 display: flex;
                 align-items: center;
                 justify-content: left;
                 margin-top: calc(0.875em/1.25);
             }
-            ul#focus li ul li {
+            .agenda ul#focus li ul li {
                 display: block;
                 margin-right: calc(0.875em/2);
+            }
+            @media only screen and (min-width: 500px) {
+                .agenda {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 500px;
+                    height: 100vh;
+                }
             }
         </style>
     </head>
     <body>
-        <div id="now"></div>
-        <ul id="timetable"></ul>
-        <ul id="focus"></ul>
+        <div class="agenda">
+            <div id="now"></div>
+            <ul id="timetable"></ul>
+            <ul id="focus"></ul>
+        </div>
     </body>
     <script>
         document.addEventListener("DOMContentLoaded", async (event) => {
-            now = [Date.now(), document.getElementById("now")] // new Date("18 May 2026, 16:00:00")
+            now = [new Date("22 May 2026, 09:00:00"), document.getElementById("now")] // new Date("18 May 2026, 16:00:00")
             today = (new Date(now[0])).setHours(0, 0, 0, 0)
             rivery = await (await fetch("./rivery.json")).json()
             focus = [Object.entries(rivery.events).filter((event) => parseInt(event[0]) > now[0] && now[0] >= parseInt(event[0])-event[1].required).sort((a, b) => {
@@ -145,46 +160,57 @@
             }), document.getElementById("focus")]
             timetable = [document.getElementById("timetable"), rivery.timetable[(new Date(now[0])).getDay().toString()]]
             agenda = Object.entries(timetable[1]).sort((a, b) => { return a[1].end - b[1].end }).filter((event) => (now[0] - today) < event[1].end)
-            if (((now[0] - today) > Object.entries(timetable[1])[0][1].start) && ((now[0] - today) < Object.entries(timetable[1]).pop()[1].end)) {
-                timetable[0].innerHTML = ""
-                now[1].className = "now"
-                display = agenda.filter((event) => (now[0] - today) < event[1].start)
-                for (var event in display) {
-                    event = [display[event], document.createElement("li")]
-                    event[1].style.top = (event[0][1].start - display[0][1].start) * (1/(0.5 * 60 * 1000)) + "px"
-                    event[1].style.height = `calc(${((event[0][1].end - event[0][1].start) * (1/(0.5 * 60 * 1000)))}px - (0.875em * 2))`
-                    console.log(event[0])
-                    if (event[0][1].type === "subject") {
+            timetable[0].innerHTML = ""
+            now[1].className = "now"
+            display = agenda.filter((event) => (now[0] - today) < event[1].start)
+            for (var event in display) {
+                event = [display[event], document.createElement("li")]
+                event[1].style.top = (event[0][1].start - display[0][1].start) * (1/(0.5 * 60 * 1000)) + "px"
+                event[1].style.height = `calc(${((event[0][1].end - event[0][1].start) * (1/(0.5 * 60 * 1000)))}px - (0.875em * 2))`
+                if (event[0][1].type === "subject") {
+                    event[1].style.backgroundColor = rivery.subjects[event[0][0]].color[0]
+                    event[1].innerHTML = `
+                        <h1>${rivery.subjects[event[0][0]].name}</h1>
+                        <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
+                        <span style="color: ${rivery.subjects[event[0][0]].color[0]}">${event[0][1].type}</span>
+                    `
+                } else if (event[0][1].type === "dining") {
+                    event[1].style.backgroundColor = "#91A6A6"
+                    event[1].innerHTML = `
+                        <h1>${event[0][0]}</h1>
+                        <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
+                        <span style="color: #91A6A6">${event[0][1].type}</span>
+                    `
+                } else if (event[0][1].type === "priority") {
+                    event[1].style.backgroundColor = "#ffae38"
+                    event[1].innerHTML = `
+                        <h1>${event[0][0]}</h1>
+                        <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
+                        <span style="color: #ffae38">${event[0][1].type}</span>
+                    `
+                } else if (event[0][1].type === "non-priority") {
+                    if (Object.keys(rivery.subjects).includes(event[0][0])) {
                         event[1].style.backgroundColor = rivery.subjects[event[0][0]].color
-                        event[1].innerHTML = `
-                            <h1>${rivery.subjects[event[0][0]].name}</h1>
-                            <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
-                            <span style="color: ${rivery.subjects[event[0][0]].color}">${event[0][1].type}</span>
-                        `
-                    } else if (event[0][1].type === "dining" && event[0][1].type === "rest") {
-                        event[1].style.backgroundColor = "#91A6A6"
-                        event[1].innerHTML = `
-                            <h1>${event[0][0]}</h1>
-                            <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
-                            <span style="color: #91A6A6">${event[0][1].type}</span>
-                        `
-                    } else if (event[0][1].type === "priority") {
-                        event[1].style.backgroundColor = "rgba(255, 255, 255, 0.9)"
-                        event[1].innerHTML = `<h1>Priority</h1>`
-                    } else if (event[0][1].type === "non-priority") {
-                        event[1].style.backgroundColor = rivery.subjects[event[0][0]].color
-                        event[1].style.opacity = 0.75
                         event[1].innerHTML = `
                             <h1>${rivery.subjects[event[0][0]].name}</h1>
                             <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
                             <span style="color: ${rivery.subjects[event[0][0]].color}">${event[0][1].type}</span>
                         `
                     }
-                    timetable[0].appendChild(event[1])
+                } else if (event[0][1].type === "personal") {
+                    event[1].style.backgroundColor = "#ffa2b9"
+                    event[1].innerHTML = `
+                        <h1>${event[0][0]}</h1>
+                        <p>${Math.floor(event[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].start%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")} - ${Math.floor(event[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((event[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
+                        <span style="color: #ffa2b9">${event[0][1].type}</span>
+                    `
                 }
-                if ((now[0] - today) >= agenda[0][1].start && (now[0] - today) <= agenda[0][1].end) {
-                    if (agenda[0][1].type === "subject" || agenda[0][1].type === "non-priority") {
-                        now[1].style.backgroundColor = rivery.subjects[agenda[0][0]].color
+                timetable[0].appendChild(event[1])
+            }
+            if ((now[0] - today) >= agenda[0][1].start && (now[0] - today) <= agenda[0][1].end) {
+                if (agenda[0][1].type === "subject" || agenda[0][1].type === "non-priority") {
+                    if (Object.keys(rivery.subjects).includes(agenda[0][0])) {
+                        now[1].style.backgroundColor = (agenda[0][1].type === "subject") ? rivery.subjects[agenda[0][0]].color[0] : rivery.subjects[agenda[0][0]].color[1]
                         now[1].innerHTML = `
                             <div>
                                 <h1>${rivery.subjects[agenda[0][0]].name}</h1>
@@ -195,41 +221,48 @@
                             </div>
                         `
                         now[1].style.display = "block"
-                    } else if (agenda[0][1].type === "dining" || agenda[0][1].type === "rest") {
-                        now[1].style.backgroundColor = "#91A6A6"
-                        now[1].innerHTML = `
-                            <div>
-                                <h1>${agenda[0][0]}</h1>
-                                <p>${Math.floor(agenda[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((agenda[0][1].start%(60 * 60 * 1000)))/(60 * 1000)).padStart(2, "0")} - ${Math.floor(agenda[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((agenda[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
-                            </div>
-                            <div class="progress">
-                                <div style="width: ${((now[0] - today) - agenda[0][1].start)/(agenda[0][1].end - agenda[0][1].start) * 100}%"></div>
-                            </div>
-                        `
-                        now[1].style.display = "block"
                     }
-                    console.log(agenda[0])
-                    console.log(((now[0] - today) - agenda[0][1].start)/(agenda[0][1].end - agenda[0][1].start))
-                }
-                focus[1].innerHTML = ""
-                weight = focus[0].reduce((a, b) => { return a + b[1].weightage }, 0)
-                for (var event in focus[0]) {
-                    event = [focus[0][event], document.createElement("li")]
-                    console.log(rivery.subjects[event[0][1].subject])
-                    event[1].style.backgroundColor = rivery.subjects[event[0][1].subject].color
-                    event[1].innerHTML = `
-                        <h1>${event[0][1].name}</h1>
-                        <p>${rivery.subjects[event[0][1].subject].name}</p>
-                        <ul>
-                            <li style="color: ${rivery.subjects[event[0][1].subject].color}">${(event[0][1].weightage * 100).toFixed(1)}% Weightage</li>
-                            <li style="color: ${rivery.subjects[event[0][1].subject].color}">In ${Math.floor((((new Date(parseInt(event[0][0]))).setHours(0, 0, 0, 0)) - now[0])/(24 * 60 * 60 * 1000))} Days</li>
-                        </ul>
+                } else if (agenda[0][1].type === "dining") {
+                    now[1].style.backgroundColor = "#91A6A6"
+                    now[1].innerHTML = `
+                        <div>
+                            <h1>${agenda[0][0]}</h1>
+                            <p>${Math.floor(agenda[0][1].start/(60 * 60 * 1000))}:${String(Math.floor((agenda[0][1].start%(60 * 60 * 1000)))/(60 * 1000)).padStart(2, "0")} - ${Math.floor(agenda[0][1].end/(60 * 60 * 1000))}:${String(Math.floor((agenda[0][1].end%(60 * 60 * 1000))/(60 * 1000))).padStart(2, "0")}</p>
+                        </div>
+                        <div class="progress">
+                            <div style="width: ${((now[0] - today) - agenda[0][1].start)/(agenda[0][1].end - agenda[0][1].start) * 100}%"></div>
+                        </div>
                     `
-                    focus[1].appendChild(event[1])
+                    now[1].style.display = "block"
                 }
-                document.body.style.display = "block"
-                console.log(focus[0])
+            } else {
+                now[1].style.backgroundColor = "#111111"
+                now[1].innerHTML = `
+                    <div style="margin: 0; display: flex; align-items: center; justify-content: center; opacity: 0.375; height: 100%; text-align: center">
+                        <div style="margin: 0; height: auto;">
+                            <h1>No events.</h1>
+                            <p style="font-size: 0.875em; line-height: calc(0.875em/1.5);">This timeslot is currently empty.</p>
+                        </div>
+                    </div>
+                `
+                now[1].style.display = "block"
             }
+            focus[1].innerHTML = ""
+            weight = focus[0].reduce((a, b) => { return a + b[1].weightage }, 0)
+            for (var event in focus[0]) {
+                event = [focus[0][event], document.createElement("li")]
+                event[1].style.backgroundColor = rivery.subjects[event[0][1].subject].color[0]
+                event[1].innerHTML = `
+                    <h1>${event[0][1].name}</h1>
+                    <p>${rivery.subjects[event[0][1].subject].name}</p>
+                    <ul>
+                        <li style="color: ${rivery.subjects[event[0][1].subject].color[0]}">${(event[0][1].weightage * 100).toFixed(1)}% Weightage</li>
+                        <li style="color: ${rivery.subjects[event[0][1].subject].color[0]}">In ${Math.floor((((new Date(parseInt(event[0][0]))).setHours(0, 0, 0, 0)) - now[0])/(24 * 60 * 60 * 1000))} Days</li>
+                    </ul>
+                `
+                focus[1].appendChild(event[1])
+            }
+            document.body.style.display = "block"
         })
     </script>
 </html>

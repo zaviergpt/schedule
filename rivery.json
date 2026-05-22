@@ -130,27 +130,27 @@
     "subjects": {
         "cHJvZ3Jh": {
             "name": "Programming",
-            "color": "#0099E1"
+            "color": ["#0099E1", ""]
         },
         "dXggZGVz": {
             "name": "UX Design in Web Development",
-            "color": "#F8C300"
+            "color": ["#F8C300", ""]
         },
         "YnVzaW5l": {
             "name": "Business Innovation & Enterprise",
-            "color": "#FD0061"
+            "color": ["#FD0061", ""]
         },
         "bmV0d29y": {
             "name": "Network Technologies",
-            "color": "#00C09A"
+            "color": ["#00C09A", ""]
         },
         "YXBwbGll": {
             "name": "Applied Mathematics in Computing",
-            "color": "#A652BB"
+            "color": ["#A652BB", ""]
         },
         "Zml0bmVz": {
             "name": "Fitness for Life",
-            "color": "#597E8D"
+            "color": ["#597E8D", ""]
         }
     },
     "timetable": {
@@ -165,15 +165,25 @@
                 "start": 32400000,
                 "end": 46799999
             },
+            "dXggZGVz": {
+                "type": "non-priority",
+                "start": 46800000,
+                "end": 61199999
+            },
             "Dinner": {
                 "type": "dining",
                 "start": 61200000,
                 "end": 64799999
             },
-            "priority": {
+            "Exam Focus": {
                 "type": "priority",
                 "start": 64800000,
                 "end": 75599999
+            },
+            "Gaming": {
+                "type": "personal",
+                "start": 75600000,
+                "end": 82799999
             }
         },
         "1": {
@@ -202,10 +212,15 @@
                 "start": 61200000,
                 "end": 64799999
             },
-            "priority": {
+            "Exam Focus": {
                 "type": "priority",
                 "start": 64800000,
                 "end": 75599999
+            },
+            "Gaming": {
+                "type": "personal",
+                "start": 75600000,
+                "end": 82799999
             }
         },
         "2": {
@@ -224,10 +239,15 @@
                 "start": 61200000,
                 "end": 64799999
             },
-            "priority": {
+            "Exam Focus": {
                 "type": "priority",
                 "start": 64800000,
                 "end": 75599999
+            },
+            "Gaming": {
+                "type": "personal",
+                "start": 75600000,
+                "end": 82799999
             }
         },
         "3": {
@@ -251,10 +271,15 @@
                 "start": 61200000,
                 "end": 64799999
             },
-            "priority": {
+            "Exam Focus": {
                 "type": "priority",
                 "start": 64800000,
                 "end": 75599999
+            },
+            "Gaming": {
+                "type": "personal",
+                "start": 75600000,
+                "end": 82799999
             }
         },
         "4": {
@@ -284,8 +309,8 @@
                 "end": 64200000
             },
             "Fuel Prayer Meeting": {
-                "type": "rest",
-                "start": 71100000,
+                "type": "personal",
+                "start": 70200000,
                 "end": 73800000
             },
             "Supper": {
@@ -305,15 +330,25 @@
                 "start": 61200000,
                 "end": 64799999
             },
-            "priority": {
+            "Exam Focus": {
                 "type": "priority",
                 "start": 64800000,
                 "end": 75599999
+            },
+            "Gaming": {
+                "type": "personal",
+                "start": 75600000,
+                "end": 82799999
             }
         },
         "6": {
+            "Exam Focus": {
+                "type": "priority",
+                "start": 28800000,
+                "end": 39599999
+            },
             "Church": {
-                "type": "rest",
+                "type": "personal",
                 "start": 45000000,
                 "end": 79199999
             }
