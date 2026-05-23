@@ -130,27 +130,27 @@
     "subjects": {
         "cHJvZ3Jh": {
             "name": "Programming",
-            "color": ["#0099E1", ""]
+            "color": ["#0099E1", "#0080bc"]
         },
         "dXggZGVz": {
             "name": "UX Design in Web Development",
-            "color": ["#F8C300", ""]
+            "color": ["#F8C300", "#edba00"]
         },
         "YnVzaW5l": {
             "name": "Business Innovation & Enterprise",
-            "color": ["#FD0061", ""]
+            "color": ["#FD0061", "#c0004a"]
         },
         "bmV0d29y": {
             "name": "Network Technologies",
-            "color": ["#00C09A", ""]
+            "color": ["#00C09A", "#009779"]
         },
         "YXBwbGll": {
             "name": "Applied Mathematics in Computing",
-            "color": ["#A652BB", ""]
+            "color": ["#A652BB", "#833b96"]
         },
         "Zml0bmVz": {
             "name": "Fitness for Life",
-            "color": ["#597E8D", ""]
+            "color": ["#597E8D", "#476571"]
         }
     },
     "timetable": {
